@@ -211,6 +211,23 @@ The GUI allows users to:
 - Interact with the ML models
 
 ---
+# 📸 Project Screenshots
+
+## GUI Screen 1
+
+![GUI 1](images%20for%20readme/gui1.jpeg)
+
+---
+
+## GUI Screen 2
+
+![GUI 2](images%20for%20readme/gui2.jpeg)
+
+---
+
+## GUI Screen 3
+
+![GUI 3](images%20for%20readme/gui3.jpeg)
 
 # 🖼️ Images Folder
 
@@ -309,23 +326,7 @@ Final project.py
 ```
 
 ---
-# 📸 Project Screenshots
 
-## GUI Screen 1
-
-![GUI 1](images%20for%20readme/gui1.jpeg)
-
----
-
-## GUI Screen 2
-
-![GUI 2](images%20for%20readme/gui2.jpeg)
-
----
-
-## GUI Screen 3
-
-![GUI 3](images%20for%20readme/gui3.jpeg)
 
 # 📌 Notes
 
