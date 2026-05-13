@@ -339,3 +339,20 @@ Final project.py
 # ❤️ Project Goal
 
 The main goal of this project is to create a realistic mobile price prediction system based on actual Egyptian market data using Machine Learning.# UsedPhone-Price-Prediction-ML
+
+
+## 👥 NOVA Team
+* Mahmood Samy
+* Mostafa Mohamed
+* Moamen Mohamed
+* Mariam Mohamed
+* Menna Ramadan
+* Adham Mohamed
+* Ahmed Mohamed
+* Youssef Omar
+* Malak Mourad
+
+---
+<p align="center">
+  <b>Mansoura National University | AI Engineering</b>
+</p>
