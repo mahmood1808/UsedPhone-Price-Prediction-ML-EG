@@ -112,13 +112,13 @@ class SmartApp(ctk.CTk):
         self.geometry("700x800") 
         self.configure(fg_color="#F0F9F7") 
 
-        base_path = os.path.dirname(__file__)
         try:
             iphone_path = os.path.join(base_path, "images.gif")
             self.iphone_logo = ctk.CTkImage(light_image=Image.open(iphone_path), size=(100, 100))
+            
             android_path = os.path.join(base_path, "android-3383929_1280.gif")
             self.android_logo = ctk.CTkImage(light_image=Image.open(android_path), size=(100, 100))
-        except:
+        except Exception as e:
             self.iphone_logo = None
             self.android_logo = None
 
