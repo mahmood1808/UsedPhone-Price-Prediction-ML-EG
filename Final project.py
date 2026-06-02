@@ -63,8 +63,8 @@ rf_model.fit(X_train, y_train)
 # ==========================================================
 # --- 1.1 تجهيز البيانات والتدريب (الماشين) للآيفون ---
 # ==========================================================
-df_iphone = pd.read_excel(r"E:\programing 1\datafinaliphone.xlsx")
-
+excel_path2 = os.path.join(base_path, 'datafinaliphone.xlsx')
+df_iphone = pd.read_excel(excel_path2)
 iphone_mapping = {
     'iphone11': 0, 'iphone11 pro': 1, 'iphone11 pro max': 2, 'iphone12': 3,
     'iphone12 mini': 4, 'iphone12 pro': 5, 'iphone12 pro max': 6, 'iphone13': 7,
