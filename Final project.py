@@ -5,12 +5,15 @@ from sklearn.ensemble import RandomForestRegressor
 import customtkinter as ctk
 import csv
 import os
+import sys
 from PIL import Image
-
+                
 # ==========================================================
 # --- 1. تجهيز البيانات والتدريب (الماشين) للأندرويد ---
 # ==========================================================
-df_test = pd.read_excel(r"C:\Users\DreamCE\Desktop\programing 1\datafinallllll.xlsx")
+base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+excel_path = os.path.join(base_path, 'datafinallllll.xlsx')
+df = pd.read_excel(excel_path)
 
 brand_model_mapping = {
     'realme C51': 65, 'realme C53': 66, 'realme C55': 67, 'realme Narzo 60x 5g': 77, 'realme Narzo 60 5g': 75,
@@ -50,8 +53,8 @@ brand_model_mapping = {
     'Honor X6b': 143, 'Honor X6c': 144
 }
 
-X = df_test.drop(['Price', 'Model', 'FIX'], axis=1) 
-y = df_test['Price']
+X = df.drop(['Price', 'Model', 'FIX'], axis=1) 
+y = df['Price']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 rf_model = RandomForestRegressor(n_estimators=500, max_depth=15, min_samples_split=5, random_state=42)
@@ -60,7 +63,7 @@ rf_model.fit(X_train, y_train)
 # ==========================================================
 # --- 1.1 تجهيز البيانات والتدريب (الماشين) للآيفون ---
 # ==========================================================
-df_iphone = pd.read_excel(r"C:\Users\DreamCE\Desktop\programing 1\datafinaliphone.xlsx")
+df_iphone = pd.read_excel(r"E:\programing 1\datafinaliphone.xlsx")
 
 iphone_mapping = {
     'iphone11': 0, 'iphone11 pro': 1, 'iphone11 pro max': 2, 'iphone12': 3,
@@ -146,7 +149,7 @@ class SmartApp(ctk.CTk):
                 "ram_lbl": "RAM Capacity:",
                 "mem_lbl": "Storage Memory:",
                 "batt_lbl": "Battery Health (%):",
-                "fix_lbl": "Repair Status:",
+                "fix_lbl": "Tax:",
                 "cond_lbl": "Device Condition:",
                 "android": "ANDROID",
                 "iphone": "iPHONE"
@@ -167,7 +170,7 @@ class SmartApp(ctk.CTk):
                 "ram_lbl": "سعة الرام:",
                 "mem_lbl": "مساحة التخزين:",
                 "batt_lbl": "صحة البطارية (%):",
-                "fix_lbl": "حالة الصيانة:",
+                "fix_lbl": "الضريبة :",
                 "cond_lbl": "حالة الجهاز:",
                 "android": "أندرويد",
                 "iphone": "آيفون"
